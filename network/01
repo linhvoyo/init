@@ -1,0 +1,1 @@
+ip link | egrep '^[0-9]*: ' | cut -d   -f2 | sed s'/:$//'
