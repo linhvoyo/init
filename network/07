@@ -1,0 +1,1 @@
+nslookup slash16.org $(nslookup -type=any slash16.org | grep nameserver| head -n1 | cut -d "=" -f2 | tr -d "[:blank:]")
