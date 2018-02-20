@@ -88,3 +88,15 @@
 
 
 #V3
+
+#https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/com.ibm.aix.security/passwords_etc_passwd_file.htm
+1.cat /etc/passwd | cut -d":" -f1,3,7
+
+#http://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/
+#https://askubuntu.com/questions/94102/what-is-the-difference-between-apt-get-update-and-upgrade
+2. echo "* 4 * * 0 apt-get update -y && apt-get upgrade -y >> /var/log/update_script.log" | crontab
+
+#
+3. if [ -n "$1" ]; then du $1 | sort -rn ; fi
+
+5.echo 42

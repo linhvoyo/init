@@ -1,0 +1,13 @@
+#run command
+# echo "0 0 * * * bash 04" | crontab
+
+if [ -f /etc/OLDMD5.txt ]
+then
+  if [ "$(cat /etc/OLDMD5.txt)" != "$(md5sum /etc/crontab | cut -d' ' -f1)" ]
+  then
+  	echo "crontab has been modified" | mail root
+    md5sum /etc/crontab | cut -d" " -f1 > /etc/OLDMD5.txt
+  fi
+else
+	OLDMD5="" > /etc/OLDMD5.txt
+fi
