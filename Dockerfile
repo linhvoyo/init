@@ -11,8 +11,9 @@ RUN apt-get update && apt-get install -y \
 	openssh-client \
 	openssh-server
 
-#ADD ./scripts /data/scripts
-#ADD ./network /data/network
-#ADD ./system /data/system
-#ADD ./run.sh /root/
+ADD ./scripts /data/scripts
+ADD ./network /data/network
+ADD ./system /data/system
+ADD ./run.sh /data/
+
 #ENTRYPOINT ["/root/run.sh"]

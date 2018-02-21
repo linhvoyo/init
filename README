@@ -1,7 +1,14 @@
-#build docker
+#build docker - must have scripts networks and system folders in the same dir as the Dockerfile 
 docker build . -t init_debian
-#run command
-docker run -it --rm -v $(pwd):/data  --privileged init_debian bash /data/run.sh | tee out
-#run docker interactively
-docker run -it --rm -v $(pwd):/data  --privileged init_debian
 
+#run command
+docker run -it --rm --privileged init_debian bash /data/run.sh | tee out
+
+#run docker interactively
+docker run -it --rm --privileged init_debian
+
+#installing docker on 42 computers
+brew install docker
+brew install docker-compose
+docker-machine create default
+eval $(docker-machine env default)
