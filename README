@@ -7,7 +7,7 @@ docker run -it --rm --privileged init_debian bash /data/run.sh | tee out
 #run docker interactively
 docker run -it --rm --privileged init_debian
 
-#installing docker on 42 computers
+#installing docker at 42
 brew install docker
 brew install docker-compose
 docker-machine create default
