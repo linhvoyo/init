@@ -5,4 +5,14 @@ RUN apt-get update && apt-get install -y \
 	iptables \
 	nano \
 	cron \
-	mail 
+	net-tools \
+	traceroute \
+	procps \
+	openssh-client \
+	openssh-server
+
+#ADD ./scripts /data/scripts
+#ADD ./network /data/network
+#ADD ./system /data/system
+#ADD ./run.sh /root/
+#ENTRYPOINT ["/root/run.sh"]

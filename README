@@ -1,0 +1,7 @@
+#build docker
+docker build . -t init_debian
+#run command
+docker run -it --rm -v $(pwd):/data  --privileged init_debian bash /data/run.sh | tee out
+#run docker interactively
+docker run -it --rm -v $(pwd):/data  --privileged init_debian
+

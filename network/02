@@ -1,1 +1,1 @@
-ip addr show eth0 | grep inet | cut -d " " -f 8
+ifconfig eth0

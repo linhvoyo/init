@@ -1,1 +1,1 @@
-iptables -I INPUT -p tcp ! -s 10.0.0.0/8 --dport 22 -j DROP
+iptables -P INPUT DROP; iptables -L
