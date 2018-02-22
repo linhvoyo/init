@@ -99,12 +99,12 @@ or /etc/init.d/ssh status
 
 #https://crm.vpscheap.net/knowledgebase.php?action=displayarticle&id=29
 #https://www.garron.me/en/bits/iptables-open-port-for-specific-ip.html
-18. iptables -I INPUT -p tcp -s 10.0.0.0/8 --dport 22 -j ACCEPT ; iptables -L
+18. iptables -I INPUT -p tcp -s 10.0.0.0/8 --dport 22 -j ACCEPT
 
 #https://unix.stackexchange.com/questions/11851/iptables-allow-certain-ips-and-block-all-other-connection
 19. iptables -I INPUT -p tcp ! -s 10.0.0.0/8 --dport 22 -j DROP
 or
-iptables -P INPUT DROP; iptables -L
+iptables -P INPUT DROP
 
 #V3
 

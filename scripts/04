@@ -1,5 +1,5 @@
-#run command
-# echo "0 0 * * * bash 04" | crontab
+# to add to cron tab run
+# echo "0 0 * * * bash ./scripts/04" | crontab
 
 if [ -f /etc/OLDMD5.txt ]
 then

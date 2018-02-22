@@ -1,1 +1,1 @@
-iptables -P INPUT DROP; iptables -L
+iptables -P INPUT DROP
